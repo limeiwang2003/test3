@@ -20,8 +20,3 @@ artifacts:
   files:
     - '**/*'
   base-directory: dist
-  secondary-artifacts:
-    artifact1:
-      files:
-        - dist/wlm
-      name: secondary-artifact-name-1
