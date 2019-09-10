@@ -4,15 +4,15 @@ phases:
     runtime-versions:
         nodejs: 10  
     commands:
-      - echo Installing .......
-      - npm install
+      - echo Installing ...
+      - yarn install
   pre_build:
     commands:
       - echo Installing pre_build ...
   build:
     commands:
       - echo Build started on `date`
-      - npm run build
+      - yarn build
   post_build:
     commands:
       - echo Build completed on `date`
