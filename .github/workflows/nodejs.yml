@@ -1,8 +1,9 @@
 name: Node CI
 
 on:
-  branches:
-  - staging
+  push:
+    branches:
+    - staging
 
 jobs:
   build:
