@@ -25,6 +25,12 @@ jobs:
       run: |
         npm install
         npm run build --if-present
-       
       env:
         CI: true
+    steps:
+    - name: test
+      run:
+        echo "aaaa"
+      if: success()  
+       
+     
