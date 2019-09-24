@@ -29,8 +29,12 @@ jobs:
         CI: true
     - name: test
       if: success()
-      run:
-        echo "aaaa"
+      uses: swinton/httpie.action@master
+      args:
+        - "POST"
+        - "httpbin.org/anything"
+        - "hello=world"
+      
         
        
      
