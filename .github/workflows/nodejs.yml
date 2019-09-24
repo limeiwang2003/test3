@@ -27,13 +27,13 @@ jobs:
         npm run build --if-present
       env:
         CI: true
-    - name: test
+    - name: Webhook
       if: success()
-      uses: swinton/httpie.action@master
-      args:
-        - "POST"
-        - "httpbin.org/anything"
-        - "hello=world"
+      uses: joelwmale/webhook-action@master
+      env:
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+      with:
+        data: "Hello from github actions!"
       
         
        
