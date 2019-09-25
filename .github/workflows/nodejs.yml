@@ -28,6 +28,13 @@ jobs:
       env:
         CI: true
             
+    - name: Webhook
+      uses: ybrin/secure-actions-webhook@0.1.2
+      env:
+        REQUEST_URI: ${{ secrets.WEBHOOK_URL }}
+        REQUEST_DATA: '{ "something": "interesting" }'
+        HMAC_SECRET: "secret_used_to_generate_signature"
+    
     - name: Webhook Action
       uses: joelwmale/webhook-action@1.0.0
       env:
