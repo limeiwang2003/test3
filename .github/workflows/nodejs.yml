@@ -28,12 +28,11 @@ jobs:
       env:
         CI: true
     - name: Webhook
-      if: success()
       uses: joelwmale/webhook-action@master
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
       with:
-        data: Hello
+        data: "Hello"
       
         
        
