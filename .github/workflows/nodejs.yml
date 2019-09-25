@@ -23,7 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build
       run: |
-        npm install
+        echo "ingore build"
+#        npm install
 #        npm run build --if-present
       env:
         CI: true
@@ -31,7 +32,7 @@ jobs:
     - name: Webhook
       uses: ybrin/secure-actions-webhook@0.1.2
       env:
-        REQUEST_URI: ${{ secrets.WEBHOOK_URL }}
+        REQUEST_URI: ${{ secrets.WEBHOOK_URL2 }}
         REQUEST_DATA: '{ "something": "interesting" }'
         HMAC_SECRET: "secret_used_to_generate_signature"
            
