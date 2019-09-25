@@ -27,10 +27,8 @@ jobs:
         npm run build --if-present
       env:
         CI: true
-  deploy:
-    steps:
     - name: Webhook
-      uses: joelwmale/webhook-action@master
+      uses: "joelwmale/webhook-action@master@{SHA-1}"
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
       with:
