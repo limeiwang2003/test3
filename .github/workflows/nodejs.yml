@@ -34,6 +34,13 @@ jobs:
         REQUEST_URI: ${{ secrets.WEBHOOK_URL }}
         REQUEST_DATA: '{ "something": "interesting" }'
         HMAC_SECRET: "secret_used_to_generate_signature"
+        
+    - name: Webhook
+      uses: ybrin/secure-actions-webhook@0.1.2
+      env:
+        REQUEST_URI: ${{ secrets.WEBHOOK_URL1 }}
+        REQUEST_DATA: '{ "something": "interesting" }'
+        HMAC_SECRET: "secret_used_to_generate_signature"
    
       
         
