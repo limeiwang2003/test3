@@ -33,7 +33,7 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
       with:
-        data: "Hello!"
+        data: Hello
       
         
        
