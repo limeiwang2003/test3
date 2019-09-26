@@ -3,8 +3,7 @@ name: Node CI
 on:
   push:
     branches:
-    - 'staging'
-    - dev
+    - staging
 
 jobs:
   build:
